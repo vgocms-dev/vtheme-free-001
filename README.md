@@ -1,9 +1,8 @@
-```markdown
-# vTheme Free 001 - vGocms Frontend (Next.js 16)
+# Hướng Dẫn Triển Khai vTheme Free 001 - vGocms Frontend (Next.js 16)
 
-Bản quyền thuộc về vgo.codes  
-Personal Telegram Support: [@apiionline](https://t.me/apiionline)  
-vGocms Community Group: [t.me/vgocms](https://t.me/vgocms)  
+Bản quyền thuộc về vgo.codes
+Personal Telegram Support: [@apiionline](https://t.me/apiionline)
+vGocms Community Group: [t.me/vgocms](https://t.me/vgocms)
 
 ---
 
@@ -23,18 +22,17 @@ vGocms Community Group: [t.me/vgocms](https://t.me/vgocms)
 ## Yêu Cầu Hệ Thống
 - Node.js >= 20.x
 - Nginx hoặc aaPanel
-- PM2 (nếu triển khai trên Windows)
+- PM2
 
 ---
 
-## Hướng Dẫn Triển Khai
+## 1. Triển Khai trên aaPanel
 
-### 1. Triển Khai trên aaPanel
+### Khởi tạo dự án
+Đăng nhập aaPanel, cài đặt **Node.js Version Manager** từ App Store.
+Upload mã nguồn lên thư mục trên server, ví dụ: `/www/wwwroot/vtheme-free-001`.
 
-**Khởi tạo dự án:**
-1. Đăng nhập aaPanel, cài đặt **Node.js Version Manager** từ App Store.
-2. Upload mã nguồn lên thư mục (vd: `/www/wwwroot/vtheme-free-001`).
-3. Mở Terminal và chạy lệnh:
+Mở Terminal và thực thi:
 ```bash
 cd /www/wwwroot/vtheme-free-001
 npm install
@@ -42,20 +40,21 @@ npm run build
 
 ```
 
-**Setup Domain:**
 
-1. Vào **Website** -> **Node project** -> **Add Node project**.
+### Thêm dự án và Setup Domain
+
+1. Vào tab **Website** -> **Node project** -> **Add Node project**.
 2. **Project directory:** Chọn `/www/wwwroot/vtheme-free-001`.
 3. **Run command:** `npm run start`.
 4. **Port:** `3000`.
-5. **Domain:** Nhập tên miền dự án.
-6. Nhấn **Submit** để aaPanel tự động tạo Nginx Reverse Proxy.
+5. **Domain:** Nhập tên miền của dự án.
+6. Nhấn **Submit**. aaPanel sẽ tự động cấu hình Nginx Reverse Proxy.
 
 ---
 
-### 2. Triển Khai trên Ubuntu (Systemd) & Cài Đặt Nginx
+## 2. Triển Khai trên Ubuntu (Systemd) & Cài Đặt Nginx
 
-**Khởi tạo và Build:**
+### Khởi tạo và Build
 
 ```bash
 cd /var/www/vtheme-free-001
@@ -64,14 +63,12 @@ npm run build
 
 ```
 
-**Cài đặt Systemd Service:**
+### Cài đặt Systemd Service
 
 ```bash
 nano /etc/systemd/system/vgocms.service
 
 ```
-
-Thêm cấu hình:
 
 ```ini
 [Unit]
@@ -92,8 +89,6 @@ WantedBy=multi-user.target
 
 ```
 
-Kích hoạt service:
-
 ```bash
 systemctl daemon-reload
 systemctl enable vgocms
@@ -101,14 +96,12 @@ systemctl start vgocms
 
 ```
 
-**Cấu Hình Nginx (Reverse Proxy):**
+### Cấu Hình Nginx
 
 ```bash
 nano /etc/nginx/sites-available/vgocms
 
 ```
-
-Thêm cấu hình:
 
 ```nginx
 server {
@@ -127,8 +120,6 @@ server {
 
 ```
 
-Kích hoạt Nginx:
-
 ```bash
 ln -s /etc/nginx/sites-available/vgocms /etc/nginx/sites-enabled/
 nginx -t
@@ -138,10 +129,9 @@ systemctl restart nginx
 
 ---
 
-### 3. Triển Khai trên Windows
+## 3. Triển Khai trên Windows
 
-1. Cài đặt Node.js cho Windows.
-2. Mở CMD hoặc PowerShell dưới quyền Administrator:
+Cài đặt Node.js cho Windows. Mở Command Prompt hoặc PowerShell dưới quyền Administrator:
 
 ```cmd
 cd C:\path\to\vtheme-free-001
@@ -156,6 +146,6 @@ pm2 startup
 
 ```
 
-Bạn có cần điều chỉnh đường dẫn thư mục mặc định trong tài liệu không?
+Bạn có cần thêm cấu hình Let's Encrypt SSL tự động vào tài liệu này không?
 
 ```
