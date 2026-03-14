@@ -1,8 +1,8 @@
 # Hướng Dẫn Triển Khai vTheme Free 001 - vGocms Frontend (Next.js 16)
 
-Bản quyền thuộc về vgo.codes
-Personal Telegram Support: [@apiionline](https://t.me/apiionline)
-vGocms Community Group: [t.me/vgocms](https://t.me/vgocms)
+Bản quyền thuộc về **vgo.codes** - **Personal Telegram Support:** [@apiionline](https://t.me/apiionline)  
+- **vGocms Community Group:** [t.me/vgocms](https://t.me/vgocms)  
+- **Business Inquiry:** `vgocms@gmail.com`
 
 ---
 
