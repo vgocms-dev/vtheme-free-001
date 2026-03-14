@@ -6,7 +6,7 @@ vGocms Community Group: [t.me/vgocms](https://t.me/vgocms)
 
 ---
 
-## Giao Diện Demo : [Xem trực tiếp]([https://t.me/apiionline](https://demo-vgo-1.vgo.codes/))
+## Giao Diện Demo : [Xem trực tiếp](https://demo-vgo-1.vgo.codes/)
 
 ### 1. Trang Chủ
 ![Giao diện trang chủ](demo-1.jpg)
