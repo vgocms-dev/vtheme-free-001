@@ -144,8 +144,13 @@ pm2 startup
 
 ```
 
-```
+## 4. Chạy Thử Nghiệm (Local Development)
 
-Bạn có cần thêm cấu hình Let's Encrypt SSL tự động vào tài liệu này không?
+Sử dụng `npm run dev` để chạy môi trường phát triển (Hot-reload). Dùng để test giao diện hoặc code trực tiếp trên máy cá nhân (Windows/macOS/Linux).
 
+Mở Command Prompt, PowerShell hoặc Terminal:
+```bash
+cd /path/to/vtheme-free-001
+npm install
+npm run dev
 ```
